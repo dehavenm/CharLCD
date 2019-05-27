@@ -1,7 +1,9 @@
 # CharLCD
 
 
-C++ driver for Adafruit 16x2 character LCD shield (based on HD44780 LCD unit connected to MCP23017 I2C interface) using the Linux i2c-dev library
+C++ driver for Adafruit 16x2 character LCD shield (based on HD44780 LCD unit connected to MCP23017 I2C interface) using the Linux i2c-dev library - this code is mainly a port of the Adafruit Arduino code:
+
+https://github.com/adafruit/Adafruit-RGB-LCD-Shield-Library
 
 Built for Jetson Xavier (though with minor changes, it should be possible to adapt it to other Linux systems which use the i2c-dev library)
 
