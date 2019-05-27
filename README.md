@@ -21,6 +21,8 @@ MCP23017 driver (included in /src directory, see also https://github.com/dehaven
 
 Copy contents of /src directory into project folder. See makefile in /example directory for compiling.
 
+Wire the +5v, ground, I2C data, and I2C clock pins of the LCD shield to your device (see pinout for Arduino or Rasberry Pi) - ignore all other pins, as only those four are actually used.
+
 
 ## Using the library
 
