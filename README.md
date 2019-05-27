@@ -23,22 +23,58 @@ Copy contents of /src directory into project folder. See makefile in /example di
 ## Using the library
 
 
-`CharLCD::CharLCD(int bus, int address)`
+`void CharLCD::CharLCD(int bus, int address)`
 
 Creates an object representing an LCD shield, using the specified I2C bus and address. On the Jetson Xavier, the options for I2C bus are 1 and 8. The default address of the MCP23017 chip is 0x20.
 
 
 
-`CharLCD::start(uint8_t cols, uint8_t lines)`
+`void CharLCD::start(uint8_t cols, uint8_t lines)`
 
 Initializes the LCD with a specified number of columns and lines (16 and 2 for the most common Adafruid LCD shield), and starts I2C communication.
 
 
-`CharLCD::clearDisplay()`
+`void CharLCD::clearDisplay()`
 
 Clears the display and sets the cursor position to (0,0).
 
 
-`CharLCD::home()`
+`void CharLCD::home()`
 
 Sets the cursor position to (0,0).
+
+
+`void CharLCD::setCursor(uint8_t col, uint8_t row)`
+
+Sets the cursor position to a specified column and line (zero index).
+
+
+`void CharLCD::display()`
+
+`void CharLCD::noDisplay()`
+
+Turns the display on or off.
+
+
+`void CharLCD::cursor()`
+
+`void CharLCD::noCursor()`
+
+Turns the underline cursor on or off.
+
+`void CharLCD::blink()`
+
+`void CharLCD::noBlink()`
+
+Turns the blinking cursor on or off.
+
+
+`void CharLCD::setBacklight(uint8_t status)`
+
+
+Sets the backlight color (enter 0x00 to turn the backlight off). When using the RGB LCD, possible values are RED, YELLOW, GREEN, TEAL, BLUE, VIOLET, or WHITE. For a monochrome LCD, enter WHITE to turn the backlight on.
+
+
+`void CharLCD::print(std::string text)`
+
+Writes text to the LCD screen. The LCD text input is based on ASCII, so the string used must be ASCII formatted. 
