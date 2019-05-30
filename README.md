@@ -82,3 +82,8 @@ Sets the backlight color (enter 0x00 to turn the backlight off). When using the 
 `void CharLCD::print(std::string text)`
 
 Writes text to the LCD screen. The LCD text input is based on ASCII, so the string used must be ASCII formatted. 
+
+
+`uint8_t CharLCD::readButtons(void)`
+
+Returns the status of all five buttons contained in an 8-bit integer value, with each the five least significant bits representing one button (1 for pressed, 0 for not pressed). See example code lcd.cpp in /example folder for commands to get the status of each individual button.
