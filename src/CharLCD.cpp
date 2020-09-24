@@ -27,8 +27,9 @@
 // can't assume that its in that state when a sketch starts (and the
 // RGBLCDShield constructor is called).
 
-CharLCD::CharLCD(int bus, int address) {
-   MCP23017 _i2c(bus, address);
+CharLCD::CharLCD(int bus, int address) 
+  : _i2c(bus, address)
+{
 
   _displayfunction = LCD_4BITMODE | LCD_2LINE | LCD_5x8DOTS;
 
